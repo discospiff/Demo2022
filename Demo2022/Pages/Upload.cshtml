@@ -1,0 +1,13 @@
+﻿@page
+@model Demo2022.Pages.UploadModel
+@{
+    var result = ViewData["result"];
+
+}
+
+<h1>Import Specimen Data</h1>
+<p>XML Validation: @result</p>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" asp-for="Upload" />
+    <input type="submit" />
+</form>
