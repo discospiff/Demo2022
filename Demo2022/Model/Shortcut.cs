@@ -1,4 +1,4 @@
-﻿namespace Demo2022
+﻿namespace Demo2022.Model
 {
     public class Shortcut
     {

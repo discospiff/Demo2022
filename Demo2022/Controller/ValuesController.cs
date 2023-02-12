@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Demo2022.Model;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,16 +37,23 @@ namespace Demo2022.Controller
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Shortcut Get(int id)
         {
-            return "value";
+            Shortcut controlC = new Shortcut();
+            controlC.FirstName = "Betty";
+            controlC.LastName = "White";
+            controlC.Software = "Microsoft";
+            controlC.KeyboardShortcut = "Control C";
+            controlC.WhatDo = "Copy";
+            
+            return controlC;
         }
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Shortcut value)
         {
-            value = value + "";
+            Console.WriteLine(value);
         }
 
         // PUT api/<ValuesController>/5
