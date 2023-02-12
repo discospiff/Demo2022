@@ -14,6 +14,8 @@ namespace Demo2022.Controller
         [Produces("application/json")]
         public IEnumerable<Shortcut> Get()
         {
+            IList<MyPlantDiary.Specimen> allSpecimens = SpecimenRoster.allSpecimens;
+
             IList<Shortcut> shortcuts = new List<Shortcut>();
 
             Shortcut controlV = new Shortcut();
@@ -39,6 +41,8 @@ namespace Demo2022.Controller
         [HttpGet("{id}")]
         public Shortcut Get(int id)
         {
+            IList<MyPlantDiary.Specimen> allSpecimens = SpecimenRoster.allSpecimens;
+
             Shortcut controlC = new Shortcut();
             controlC.FirstName = "Betty";
             controlC.LastName = "White";
@@ -53,6 +57,8 @@ namespace Demo2022.Controller
         [HttpPost]
         public void Post([FromBody] Shortcut value)
         {
+            IList<MyPlantDiary.Specimen> allSpecimens = SpecimenRoster.allSpecimens;
+
             Console.WriteLine(value);
         }
 

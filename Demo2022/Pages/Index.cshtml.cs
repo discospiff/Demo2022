@@ -40,6 +40,8 @@ namespace Demo2022.Pages
             var task = GetData();
             var result = task.Result;
             ViewData["Specimens"] = result;
+            SpecimenRoster.allSpecimens = result;
+
 
             ViewData["Foo"] = 1;
 
